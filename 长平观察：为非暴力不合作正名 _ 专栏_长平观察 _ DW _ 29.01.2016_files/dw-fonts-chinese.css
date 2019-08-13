@@ -1,0 +1,463 @@
+@charset "UTF-8";
+
+/* 	Prototyp/Template Fontformate Latin/LTR
+	Start 7.12.2011	Version 1.1
+	Letzte Änderung: 13.12.2012
+	Alex Koch | wysiwyg*
+*/
+
+/* A N T I Q U A */
+
+/* main */
+div#navContainer div#navMain ul#navLevel1 li div.flyout div.navTeaserGroup div.navTeaser a h2 {
+    font: 20px/24px 'MS Song', 'MS Hei';
+}
+
+div#headerSub h1 {
+    font: 38px/36px 'MS Song', 'MS Hei';
+}
+
+div#headerSub.farbig h1 {
+    font: 38px/36px 'MS Song', 'MS Hei';
+}
+
+
+/* teaser */
+div.news h2 {
+    font: 21px/25px 'MS Song', 'MS Hei';
+}
+
+div.news p, div.col2 div.news a div.newsWrapper div.longText {
+    font: 16px/19px 'MS Song', 'MS Hei';
+}
+
+div.col1 div.news h2,
+div.col1 div.news a h2,
+form.modular h2 {
+    font: 20px/30px 'MS Song', 'MS Hei';
+}
+
+div.col1 div.news p {
+    font: 16px/20px 'MS Song', 'MS Hei';
+}
+
+div.linkList a h2 {
+    font: 18px/22px 'MS Song', 'MS Hei';
+}
+
+div.linkList a p {
+    font: 16px/20px 'MS Song', 'MS Hei';
+}
+
+div.group.poll div.linkList h2.frage {
+    font: 18px/22px 'MS Song', 'MS Hei' !important;
+}
+
+div.col3 p,
+div.col4 p,
+.longText {
+    font: 17px/25px 'MS Song', 'MS Hei';
+}
+
+div.col4 p.intro,
+div.col3 p.intro {
+    font: 19px/25px 'MS Song', 'MS Hei';
+}
+
+div.picBox p,
+div.picBox span {
+    font: 15px/20px 'MS Song', 'MS Hei';
+}
+
+div.col3 h3, div.col3 p > b, div.col3 p > strong,
+div.col4 h3, div.col4 p > b, div.col4 p > strong {
+    font: 19px/25px 'MS Song', 'MS Hei';
+}
+
+div.col2 h3, div.col2 p > b, div.col2 p > strong {
+    font: 17px/20px 'MS Song', 'MS Hei';
+}
+
+div.col3 h1, div.col4 h1 {
+    font: 37px/40px 'MS Song', 'MS Hei';
+}
+
+div.col3 h1.topic, div.col4 h1.topic {
+    font: 31px/30px 'MS Song', 'MS Hei';
+}
+
+table.progContent td {
+    font: normal 16px/14px 'MS Song', 'MS Hei';
+}
+
+/* table.progContent.week td {
+	font: normal 16px/20px 'MS Song', 'MS Hei'; } */
+
+.longText ul, .longText ol {
+    font: 15px/22px 'MS Song', 'MS Hei';
+}
+
+/* mteaser */
+div.imgTeaserXL div.teaserContentWrap h2,
+div.imgTeaserL div.teaserContentWrap h2,
+div#artHead div.teaserContentWrap h1,
+div#artHead div.teaserContentWrap h2,
+div#headerLarge div.teaserContentWrap h2,
+div#pageOverlay div.floatingBox div.col3 h1,
+div#pageOverlay div.floatingBox div.col3 h2 {
+    font: 31px/30px 'MS Song', 'MS Hei';
+}
+
+div#headerLarge div.teaserContentWrap h2 {
+    font: 25px/25px 'MS Song', 'MS Hei';
+}
+
+div.imgTeaserM div.teaserContentWrap h2 {
+    font: 21px/25px 'MS Song', 'MS Hei';
+}
+
+div.imgTeaserS h2,
+div.teaserContentWrap div.imgTeaserS h2 {
+    font: 16px/17px 'MS Song', 'MS Hei';
+}
+
+div.imgTeaserXL p,
+div.imgTeaserL p,
+div.standaloneWrap div.imgTeaserL p,
+div.imgTeaserM p,
+div.standaloneWrap div.imgTeaserM p {
+    font: 16px/20px 'MS Song', 'MS Hei';
+}
+
+/* forms */
+form.modular h2 {
+    font: 20px/25px 'MS Song', 'MS Hei';
+}
+
+body.popUp div.col3 h1 {
+    font: 29px/30px 'MS Song', 'MS Hei';
+}
+
+body.popUp div.col3 p {
+    font: 16px/20px 'MS Song', 'MS Hei';
+}
+
+
+/* G R O T E S K */
+/* mteaser */
+div.imgTeaserXS h2,
+div.teaserContentWrap div.imgTeaserXS h2 {
+    font: normal normal bold 13px/13px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.tools a {
+    font: normal normal bold 14px/15px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.slidePagination a {
+    font: normal normal bold 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.timer {
+    font: 11px/11px Arial, Helvetica, sans-serif;
+}
+
+/* share overlay */
+div.teaserContentWrap.share p {
+    font: normal normal normal 13px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.teaserContentWrap.share p > strong {
+    font: normal normal normal 13px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+/* main */
+div#topMetaInner {
+    font: bold 12px/20px Arial, Helvetica, sans-serif;
+}
+
+div#navMeta {
+    font: normal normal normal 11px/11px Arial, Helvetica, sans-serif;
+}
+
+div#search form input {
+    font: normal normal normal 14px/15px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#navPath {
+    font: normal normal normal 13px/11px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#navMain ul#navLevel1 li a {
+    font: normal normal bold 21px/25px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#navMain ul#navLevel2 li a {
+    font: normal normal bold 16px/14px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#subNav ul.subNavPulldown li ul li {
+    font: normal normal normal 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#subNav ul.subNavPulldown li ul li a {
+    font: normal normal bold 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#navMain ul#navLevel1 li div.flyout ul.sitemap li {
+    font: normal normal normal 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#navMain ul#navLevel1 li div.flyout ul.sitemap li a {
+    font: normal normal bold 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#navMain ul#navLevel1 li div.flyout ul.sitemap li ul.sitemap li a {
+    font: normal normal normal 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#navMain ul#navLevel1 li div.flyout ul.sitemap li ul.sitemap li ul.sitemap li a {
+    font: normal normal normal 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#subNav a,
+div#subNav span.navHeadline {
+    font: normal normal bold 15px/14px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#headerSub.farbig div#subNav a,
+div#headerSub.farbig div#subNav span.navHeadline {
+    font: normal normal bold 15px/14px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#headerSub.farbig div#subNav ul.subNavPulldown li ul li {
+    font: normal normal normal 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div#headerSub.farbig div#subNav ul.subNavPulldown li ul li a {
+    font: normal normal bold 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+ul.footer li {
+    font: normal normal bold 14px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+ul.footer li a {
+    font: normal normal normal 14px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+ul.footer li a:hover {
+    color: #000;
+}
+
+div#footerBody p {
+    font: normal normal normal 13px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+#quickjump a:focus, #quickjump a:active {
+    font: normal normal bold 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+.skipLink a {
+    font: normal normal normal 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+/* teaser */
+span.breakNewsTitle {
+    font-size: 14px;
+}
+
+div#breakingNews,
+div#liveStreamInfo,
+div#breakingNews a,
+div#liveStreamInfo a {
+    font: normal normal bold 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.lsibCell.region {
+    font: bold 15px/19px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.lsibCell.current, div.lsibCell.upcoming {
+    font: normal normal normal 16px/19px 'MS Song', 'MS Hei', sans-serif;
+}
+
+h4 {
+    font: 12px 'MS Song', 'MS Hei', sans-serif;
+}
+
+span.date, a span.date {
+    font-size: 12px;
+    font-family: 'MS Song', 'MS Hei', sans-serif;
+}
+
+span.label, a span.label {
+    font: normal normal bold 12px/15px 'MS Song', 'MS Hei', sans-serif;
+}
+
+ul.smallList {
+    font: normal normal normal 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.col1 div.news.epg form.modular div.formElement label {
+    font: normal normal bold 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.news.kontakt div.kontaktWrap h2,
+div.news.kontakt div.kontaktWrap p {
+    font: normal normal normal 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.result {
+    font: normal normal bold 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+table.progHead {
+    font: bold 14px/12px 'MS Song', 'MS Hei', sans-serif;
+    color: #3e3e3e;
+    text-transform: uppercase;
+}
+
+table.progHead a {
+    font: normal 14px/12px 'MS Song', 'MS Hei', sans-serif;
+}
+
+table.progContent th {
+    font: bold 14px/12px 'MS Song', 'MS Hei', sans-serif;
+}
+
+table.progContent.week td > span.label {
+    font: 12px/10px 'MS Song', 'MS Hei', sans-serif;
+}
+
+/* Language- und Mini-Label farbig
+table.progContent.week td > span.label {
+	font: bold 7px/7px 'MS Song', 'MS Hei', sans-serif; }*/
+
+div.bubbleText h2,
+div.bubbleText p {
+    font: 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+
+/* form */
+form.modular div.formElement label {
+    font: normal normal bold 15px/25px 'MS Song', 'MS Hei', sans-serif;
+}
+
+form.modular div.formElement.expl {
+    font: normal normal normal 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+form.modular div.optionBox label {
+    font: normal normal normal 15px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+a.linkAutoTopic,
+form.modular input[type="text"] {
+    font: normal normal normal 15px/15px 'MS Song', 'MS Hei', sans-serif;
+}
+
+form.modular div.formElement.dreisp textarea {
+    font: normal normal bold 15px/15px 'MS Song', 'MS Hei', sans-serif;
+}
+
+form.modular div.formElement.doppel textarea {
+    font: normal normal bold 15px/15px 'MS Song', 'MS Hei', sans-serif;
+}
+
+form.modular input[type="submit"] {
+    font: normal normal normal 13px/16px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.pagination div.linkWrapper a {
+    font: normal normal bold 15px/12px 'MS Song', 'MS Hei', sans-serif;
+}
+
+/* ADD-ONS language-specific */
+
+div.col3 div.col1 div.news.relatedMinHeight {
+    min-height: 390px;
+}
+
+div.col2 div.col1 div.news.minHeight {
+    min-height: 290px;
+}
+
+div.col2 div.news.minHeight {
+    min-height: 185px;
+}
+
+/* SEARCH 2.0 legacy */
+
+form.searchHeader h5 {
+    font: 21px/26px 'MS Song', 'MS Hei', sans-serif;
+}
+
+/* SEARCH & FILTER 3.0 */
+
+form.searchHeader input.huge,
+div.tooMuch, h2.dkCfTitle {
+    font: 21px/26px 'MS Song', 'MS Hei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+form.searchHeader input[type="submit"],
+a.addPage,
+div.addedPage,
+form.searchHeader a#trigger,
+form.searchHeader div#drawer div.label,
+form.searchHeader div.elSelectorWrap a.button {
+    font: normal normal normal 14px/14px 'MS Song', 'MS Hei', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+form.searchHeader div#drawer a,
+form.searchHeader div#drawer input,
+form.searchHeader div.elSelectorWrap div#dkuserOptions a,
+form.searchHeader div.elSelectorWrap div#dklanguageOptions a,
+span.oddOption {
+    font: normal normal bold 13px/15px 'MS Song', 'MS Hei', sans-serif;
+    text-transform: none !important;
+}
+
+div.addedPage, div.searchSorter {
+    font: normal normal bold 12px/15px 'MS Song', 'MS Hei', sans-serif;
+    text-transform: none !important;
+}
+
+ul#searchAcMain li div {
+    font: 13px/14px 'MS Song', 'MS Hei', sans-serif;
+}
+
+ul#searchAcHuge li div {
+    font: 21px/21px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.searchResult a div.tw h2 {
+    font: normal 18px/24px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.searchResult a div.tw p {
+    font: normal 14px/20px 'MS Song', 'MS Hei', sans-serif;
+}
+
+div.searchSorter div.sortLink a {
+    font: normal normal bold 13px/12px 'MS Song', 'MS Hei', sans-serif;
+}
+
+/* ------------------ DATENSCHUTZVERORDNUNG -------------------- */
+.cookie {
+    font: normal normal 400 12px/18px 'MS Song', 'MS Hei', sans-serif;
+}
+
+/***Character switch***/
+.zh-convert {
+    color: #00468f;
+}
+
+.zh-convert:hover {
+    cursor: pointer;
+    color: #0087eb;
+}

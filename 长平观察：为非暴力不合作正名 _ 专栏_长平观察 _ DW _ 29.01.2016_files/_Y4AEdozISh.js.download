@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["hZbIw"]); }
+
+__d("stableStringifyPrefetchedRelayVariablesWithActor",["stableStringify"],(function(a,b,c,d,e,f){"use strict";__p&&__p();function a(a,c){a=["$actorID:"+a];var d=Object.keys(c).sort();for(var e=0;e<d.length;e++){var f=d[e],g=c[f];g!=null&&a.push(f+": "+b("stableStringify")(g))}return"{"+a.join(",")+"}"}e.exports=a}),null);

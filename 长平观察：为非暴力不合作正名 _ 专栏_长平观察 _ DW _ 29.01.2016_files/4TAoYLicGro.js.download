@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["1lFfM"]); }
+
+__d("TepigUtils",["TepigSubscriber"],(function(a,b,c,d,e,f){"use strict";__p&&__p();var g=b("TepigSubscriber").sendSignal;a=function(a,b,c,d){a={impressionFramework:a,signalType:c,source:d,targetElem:b};c={TepigExternalSignalPayload:a,TepigExternalValidationSignalPayload:null};g(c)};c=function(a,b,c,d,e,f,h){e={failureReason:e,impressionFramework:a,signalType:c,source:h,targetElem:b,validationResult:d,validationSession:f};a={TepigExternalSignalPayload:null,TepigExternalValidationSignalPayload:e};g(a)};e.exports={sendTepigSignal:a,sendTepigValidationSignal:c}}),null);

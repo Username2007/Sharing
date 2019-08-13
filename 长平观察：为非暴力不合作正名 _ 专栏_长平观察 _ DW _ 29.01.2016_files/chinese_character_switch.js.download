@@ -1,0 +1,204 @@
+/**
+ * Created by Milan on 20.10.2016.
+ * Wait until the document is loaded, then fire the checks and set up traditional or simplified characters, depending on the
+ * users settings
+ */
+$(document).ready(function () {
+    DW_CHINESE_CHARACTER_SWITCH.init();
+});
+
+/**
+ * Chinese character switcher to switch between traditional and simplified characters
+ */
+var DW_CHINESE_CHARACTER_SWITCH = {
+
+    /**
+     * Config:
+     * localStorageParameter: The Key to store the users preference in the browsers localstorage
+     * characterParameter: The Key for the GET-Paramter in the URL
+     * simplifiedParamterValue: The value for the characterParameter if it is set to simplified Chines
+     * traditionalparameterValue: The value for the characterParameter if it is set to traditional Chinese
+     * zhConvertElementIdentifier: the HTML-Element id to be used by the Tongwen script to store stuff
+     * dataLangSimplified: The data-lang element of simplified Chinese at the LanguageSection
+     * dataLangTraditional: The data-lang element of traditional Chinese at the LanguageSection
+     */
+    localStorageParameter: "isTraditionalChin",
+    characterParameter: "zhongwen",
+    simplifiedParameterValue: "simp",
+    traditionalParameterValue: "trad",
+    zhConvertElementIdentifier: "zh-convert",
+    dataLangSimplified: "zh-CN",
+    dataLangTraditional: "zh-CN-t",
+
+    /**
+     * Check if the users browser has the capability to store stuff in localstorage, then
+     * check if the user has set the page to traditional chinese. If true -> set it to traditional again after loading the page.
+     */
+    init: function () {
+        var zhConvert = this.getZhConvertElement();
+
+        if (this.isTraditional()) {
+            this.trans2Traditional(zhConvert);
+        } else {
+            this.trans2Simple(zhConvert);
+        }
+
+        /**
+         * Onclick listener for the zhConvert button on top of the page
+         */
+        zhConvert.onclick = function () {
+            if (zhConvert.dataset.zh === "tw") {
+                DW_CHINESE_CHARACTER_SWITCH.trans2Simple(zhConvert);
+            } else {
+                DW_CHINESE_CHARACTER_SWITCH.trans2Traditional(zhConvert);
+            }
+        };
+    },
+
+    /**
+     * Translates the whole page to simplified chinese
+     * @param zhConvert is the zhConvert HTML-element, which is used by the tongwen script to store data
+     */
+    trans2Simple: function (zhConvert) {
+        TongWen.trans2Simp(document);
+        if (!DWDE.environment.isMobileWebsite()) {
+            zhConvert.dataset.zh = "cn";
+            setTimeout(function () {
+                zhConvert.textContent = "繁";
+            }, 100);
+        }
+        this.saveToStorage('false');
+        DW_CHINESE_CHARACTER_SWITCH.addParam(this.characterParameter, this.simplifiedParameterValue);
+        this.changeLanguageSelectionClassElement();
+    },
+
+    /**
+     * Translates the whole page to traditional chinese
+     * @param zhConvert is the zhConvert HTML-element, which is used by the tongwen script to store data
+     */
+    trans2Traditional: function (zhConvert) {
+        TongWen.trans2Trad(document);
+
+        if (!DWDE.environment.isMobileWebsite()) {
+            //Translate placeholder in header_topNav input
+            var searchElementAttribute = document.getElementsByName("item")[0].getAttribute("placeholder");
+            if (searchElementAttribute) {
+                var searchThrough = TongWen.convert(searchElementAttribute, TongWen.flagTrad);
+                document.getElementsByName("item")[0].setAttribute("placeholder", searchThrough);
+            }
+
+            zhConvert.dataset.zh = "tw";
+            setTimeout(function () {
+                zhConvert.textContent = "简";
+            }, 100);
+        }
+        this.saveToStorage('true');
+        DW_CHINESE_CHARACTER_SWITCH.addParam(this.characterParameter, this.traditionalParameterValue);
+        this.changeLanguageSelectionClassElement();
+    },
+
+    /**
+     * Returns true if either the URL or the localstorage parameters are set to traditional Chinese
+     * @returns {boolean}
+     */
+    isTraditional: function () {
+        if ((localStorage.getItem(this.localStorageParameter) === "true")) {
+            if ((this.getTraditionalParam() === this.simplifiedParameterValue)) {
+                this.saveToStorage('false');
+            }
+        }
+        return ((this.getTraditionalParam() === this.traditionalParameterValue) || (localStorage.getItem(this.localStorageParameter) === "true"));
+    },
+
+    /**
+     * Checks if the browser has localstorage available
+     * @returns {boolean} true or false, depending on the browsers localstorage capabilities
+     */
+    getIsStorageAvailable: function () {
+        return typeof (Storage) !== "undefined";
+    },
+
+    saveToStorage: function (value) {
+        if (DWDE.dsgvo.isStoringCookiesOkay() && this.getIsStorageAvailable()) {
+            localStorage.setItem(this.localStorageParameter, value);
+        }
+    },
+
+    /**
+     * Gets the zhConvert div, which is used by the tongwen script to store data
+     * @returns {Element} zhConvert
+     */
+    getZhConvertElement: function () {
+        return document.getElementById(this.zhConvertElementIdentifier);
+    },
+
+    /**
+     * Searches the URL for the chinese character type parameter and returns its value
+     * @returns string value
+     */
+    getTraditionalParam: function () {
+        var result = null, tmp = [];
+        location.search
+            .substr(1)
+            .split("&")
+            .forEach(function (item) {
+                tmp = item.split("=");
+                if (tmp[0] === DW_CHINESE_CHARACTER_SWITCH.characterParameter) {
+                    result = decodeURIComponent(tmp[1]);
+                }
+            });
+        return result;
+    },
+
+    /**
+     * Highlights the selected language (Simplified/Traditional) at the LanguageSection
+     */
+    changeLanguageSelectionClassElement: function () {
+        var languageSection = $("#languageSection");
+        if (localStorage.getItem(this.localStorageParameter) === "true") {
+            if (DWDE.environment.isMobileWebsite()) {
+                $("a[hreflang|=" + this.dataLangSimplified + "]").parent().removeClass("languageselect__list-item--checked");
+                $("a[hreflang|=" + this.dataLangTraditional + "]").parent().addClass("languageselect__list-item--checked");
+            } else {
+                languageSection.find("a[data-lang=" + this.dataLangSimplified + "]").removeClass("ici");
+                languageSection.find("a[data-lang=" + this.dataLangTraditional + "]").addClass("ici");
+            }
+        } else {
+            if (DWDE.environment.isMobileWebsite()) {
+                $("a[hreflang|=" + this.dataLangSimplified + "]").parent().addClass("languageselect__list-item--checked");
+                $("a[hreflang|=" + this.dataLangTraditional + "]").parent().removeClass("languageselect__list-item--checked");
+            } else {
+                languageSection.find("a[data-lang=" + this.dataLangTraditional + "]").removeClass("ici");
+                languageSection.find("a[data-lang=" + this.dataLangSimplified + "]").addClass("ici");
+            }
+        }
+    },
+
+    /**
+     * Adds a parameter to the URL and redirects the user to the new URL if the new value differs to the old paramValue
+     * @param key
+     * @param value
+     */
+    addParam: function (key, value) {
+        key = encodeURI(key);
+        value = encodeURI(value);
+
+        var keyValuePairs = document.location.search.substr(1).split('&');
+
+        var i = keyValuePairs.length;
+        var x;
+        while (i--) {
+            x = keyValuePairs[i].split('=');
+
+            if (x[0] === key) {
+                x[1] = value;
+                keyValuePairs[i] = x.join('=');
+                break;
+            }
+        }
+
+        if (i < 0) {
+            keyValuePairs[keyValuePairs.length] = [key, value].join('=');
+        }
+    }
+};

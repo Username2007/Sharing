@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["SWxIg"]); }
+
+__d("TepigPostNames",[],(function(a,b,c,d,e,f){"use strict";var g={};a=function(a,b){g[a]==null?g[a]=b:g[a]!==b&&(g[a]=b)};b=function(a){return g[a]?g[a]:null};e.exports={addPostName:a,getPostName:b}}),null);

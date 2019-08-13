@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["muGhj"]); }
+
+__d("TepigUtilsTypes",[],(function(a,b,c,d,e,f){"use strict";a=Object.freeze({ADID:"ad_id",POSTID:"post_id"});b=Object.freeze({BLUE:"blue",COMET:"comet"});c=Object.freeze({ENTER:"enter",EXIT:"exit",LOG:"log",VALIDATE:"validate"});e.exports={TEPIG_ID_TYPES:a,TEPIG_SIGNALS:c,TEPIG_SOURCE:b}}),null);

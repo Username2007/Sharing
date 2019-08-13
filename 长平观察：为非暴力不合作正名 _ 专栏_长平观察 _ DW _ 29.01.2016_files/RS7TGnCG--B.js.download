@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["dAvym"]); }
+
+__d("relay-runtime/store/RelayConnection",[],(function(a,b,c,d,e,f){"use strict";c="__connection";d="__ConnectionRecord";function a(a,b){return"connection:"+a+":"+b}function b(a){return{__id:a,__typename:"__ConnectionRecord",events:[]}}e.exports={createConnectionID:a,createConnectionRecord:b,CONNECTION_KEY:c,CONNECTION_TYPENAME:d}}),null);
