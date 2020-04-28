@@ -227,10 +227,10 @@ Ethics in Fantasy, Part I: That Evil Game? / Copyright 1988 by Tracy Raye Hickma
 
 
 
-转自 【AmethystZh 的BLOG：紫晶的奇幻天地】（以下链接已失效）
-BLOG地址：http://www.smth.edu.cn/pc/index.php?id=AmethystZh
-日志地址：http://www.smth.edu.cn/pc/pccon.php?id=1714&nid=93030&s=all
-
-
-
 英文原版地址：http://kunst.erzwiss.uni-hamburg.de/Tan/Homepage/Rollenspiel/Ethics.html
+
+转自 【AmethystZh 的BLOG：紫晶的奇幻天地】（以下链接已失效）
+
+BLOG地址：http://www.smth.edu.cn/pc/index.php?id=AmethystZh
+
+日志地址：http://www.smth.edu.cn/pc/pccon.php?id=1714&nid=93030&s=all
